@@ -1,0 +1,49 @@
+{
+	"StorageDescriptor": {
+		"cols": {
+			"FieldSchema": [
+				{
+					"name": "sensorreadingtime",
+					"type": "bigint",
+					"comment": ""
+				},
+				{
+					"name": "serialnumber",
+					"type": "string",
+					"comment": ""
+				},
+				{
+					"name": "distancefromobject",
+					"type": "int",
+					"comment": ""
+				}
+			]
+		},
+		"location": "s3://bighead418/step_trainer/landing",
+		"inputFormat": "org.apache.hadoop.mapred.TextInputFormat",
+		"outputFormat": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+		"compressed": "false",
+		"numBuckets": "-1",
+		"SerDeInfo": {
+			"name": "",
+			"serializationLib": "org.apache.hive.hcatalog.data.JsonSerDe",
+			"parameters": {
+				"serialization.format": "1"
+			}
+		},
+		"bucketCols": [],
+		"sortCols": [],
+		"parameters": {},
+		"SkewedInfo": {
+			"skewedColNames": [],
+			"skewedColValues": [],
+			"skewedColValueLocationMaps": {}
+		},
+		"storedAsSubDirectories": "false"
+	},
+	"parameters": {
+		"EXTERNAL": "TRUE",
+		"transient_lastDdlTime": "1675313927",
+		"classification": "json"
+	}
+}
